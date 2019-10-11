@@ -13,7 +13,7 @@ class Main extends React.Component{
         }
     }
     componentDidMount() {
-        fetch('http://127.0.0.1:8000/resource').then(r => r.json()).then(r => {
+        fetch('/resource').then(r => r.json()).then(r => {
             this.setState({
                 breakdown : r.breakdown,
                 ready : r.ready,
