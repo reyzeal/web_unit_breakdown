@@ -67,7 +67,8 @@ class Main extends React.Component{
                     <button data-toggle="modal" data-target="#tambahBreakdown">
                         <i className="fa fa-gear"> </i> Add Breakdown
                     </button>
-                    <table className="table table-bordered my-3">
+                    <div className="table-responsive">
+                        <table className="table table-bordered my-3">
                         <thead className="thead-dark">
                             <tr>
                                 <th>No</th>
@@ -99,10 +100,12 @@ class Main extends React.Component{
                         {!breakdown.length?<tr><td className="text-center" colSpan={7}>Saat ini kosong</td></tr>:''}
                         </tbody>
                     </table>
+                    </div>
                 </div>
                 <div className="tab-pane fade py-3" id="ready" role="tabpanel" aria-labelledby="ready-tab">
                     {/*<button data-toggle="modal" data-target="#tambahReady" className="btn btn-primary my-3">Tambah Ready</button>*/}
-                    <table className="table table-bordered my-3">
+                    <div className="table-responsive">
+                        <table className="table table-bordered my-3">
                         <thead className="thead-dark">
                         <tr>
                             <th>No</th>
@@ -130,12 +133,14 @@ class Main extends React.Component{
                         {!ready.length?<tr><td className="text-center" colSpan={6}>Saat ini kosong</td></tr>:''}
                         </tbody>
                     </table>
+                    </div>
                 </div>
                 <div className="tab-pane fade py-3" id="report" role="tabpanel" aria-labelledby="report-tab">
                     <button onClick={this.print.bind(this)}>
                         <i className="fa fa-print"> </i> Print
                     </button>
-                    <table className="table table-bordered my-3" id="table-report">
+                    <div className="table-responsive">
+                        <table className="table table-bordered my-3" id="table-report">
                         <thead className="thead-dark">
                         <tr>
                             <th>No</th>
@@ -167,6 +172,7 @@ class Main extends React.Component{
                         {!all.length?<tr><td className="text-center" colSpan={8}>Saat ini kosong</td></tr>:''}
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
 
