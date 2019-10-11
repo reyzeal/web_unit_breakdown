@@ -27,6 +27,7 @@ Route::get('/', function (){
 });
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/resource', 'HomeController@resource')->name('resource');
+Route::get('/download', 'HomeController@download')->name('download');
 Route::post('/breakdown','HomeController@addBreakdown')->name('breakdown');
 Route::post('/edit/breakdown','HomeController@editBreakdown')->name('edit.breakdown');
 Route::post('/ready','HomeController@addReady')->name('ready');

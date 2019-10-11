@@ -152,9 +152,14 @@ class Main extends React.Component{
                     </div>
                 </div>
                 <div className="tab-pane fade py-3" id="report" role="tabpanel" aria-labelledby="report-tab">
-                    <button onClick={this.print.bind(this)}>
-                        <i className="fa fa-print"> </i> Print
-                    </button>
+                    <div className="d-flex flex-row-reverse">
+                        <button className="btn btn-outline-primary" onClick={this.print.bind(this)}>
+                            <i className="fa fa-file-pdf-o"> </i> Print PDF
+                        </button>
+                        <a className="btn btn-outline-primary" href="/download">
+                            <i className="fa fa-file-excel-o"> </i> Print Excel
+                        </a>
+                    </div>
                     <div className="table-responsive" id="table-report">
                         <p className="display-4 text-center">Data Breakdown</p>
                         <table className="table table-bordered my-3">

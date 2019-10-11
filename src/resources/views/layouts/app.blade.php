@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
-    <div id="app">
+    <div id="app" style="min-height: 100vh">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Unit Breakdown
+                    <i class="fa fa-chain-broken text-danger"> </i> Unit Breakdown
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -76,6 +76,9 @@
         <main class="py-4">
             @yield('content')
         </main>
+    </div>
+    <div class="bg-dark text-muted text-center py-3">
+        <a class="text-muted" href="https://instagram.com/reyzeal">Reyzeal</a> &copy; 2019 <a class="text-muted" href="https://instagram.com/eternal_loops.id">Eternal Loops</a>
     </div>
 </body>
 </html>

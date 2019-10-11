@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Sys.Unit.Breakdown</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -25,6 +25,7 @@
             }
             .content{
                 padding: 25px;
+                min-height: 100vh;
             }
             .flex-center {
                 align-items: center;
@@ -139,6 +140,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="bg-dark text-muted text-center py-3">
+            <a class="text-muted" href="https://instagram.com/reyzeal">Reyzeal</a> &copy; 2019 <a class="text-muted" href="https://instagram.com/eternal_loops.id">Eternal Loops</a>
         </div>
     </body>
 </html>
