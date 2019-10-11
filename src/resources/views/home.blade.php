@@ -38,8 +38,8 @@
                         <input class="form-control" type="text" name="code">
                     </div>
                     <div class="form-group">
-                        <label>Breakdown Timestamp</label>
-                        <input class="form-control flatpick" placeholder="Select time" type="text" name="breakdown">
+                        <label>Location</label>
+                        <input class="form-control" type="text" name="location">
                     </div>
                     <div class="form-group">
                         <label>Description</label>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="form-group">
                         <label>Breakdown Timestamp</label>
-                        <input class="form-control flatpick" placeholder="Select time" type="text" name="breakdown">
+                        <input class="form-control" type="text" name="location">
                     </div>
                     <div class="form-group">
                         <label>Description</label>
@@ -120,8 +120,8 @@
                         <input class="form-control" type="text" name="code">
                     </div>
                     <div class="form-group">
-                        <label>Ready Timestamp</label>
-                        <input class="form-control flatpick" type="text" placeholder="Select time" name="ready">
+                        <label>Location</label>
+                        <input class="form-control" type="text" name="location">
                     </div>
                     <div class="form-group">
                         <label>Description</label>

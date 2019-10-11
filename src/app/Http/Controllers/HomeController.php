@@ -33,9 +33,10 @@ class HomeController extends Controller
         if(!$unit) $unit = Unit::create(['code' => $request->get('code')]);
         Log::create([
             'unit_id' => $unit->id,
-            'breakdown' => $request->breakdown,
+            'breakdown' => now(),
             'kategori' => $request->kategori,
-            'keterangan' => $request->keterangan
+            'keterangan' => $request->keterangan,
+            'location' => $request->location
         ]);
 
         return redirect()->back();
@@ -47,8 +48,9 @@ class HomeController extends Controller
 
         $log->fill([
             'unit_id' => $unit->id,
-            'breakdown' => $request->breakdown,
+            'breakdown' => now(),
             'kategori' => $request->kategori,
+            'location' => $request->location,
             'keterangan' => $request->keterangan
         ]);
         $log->save();
@@ -63,9 +65,10 @@ class HomeController extends Controller
 
         $log->fill([
             'unit_id' => $unit->id,
-            'ready' => $request->ready,
+            'ready' => now(),
             'kategori' => $request->kategori,
-            'keterangan' => $request->keterangan
+            'keterangan' => $request->keterangan,
+            'location' => $request->location
         ]);
 
         $log->save();

@@ -21,9 +21,11 @@
             }
 
             .full-height {
-                height: 100vh;
+                height: 50px;
             }
-
+            .content{
+                padding: 25px;
+            }
             .flex-center {
                 align-items: center;
                 display: flex;
@@ -38,10 +40,6 @@
                 position: absolute;
                 right: 10px;
                 top: 18px;
-            }
-
-            .content {
-                text-align: center;
             }
 
             .title {
@@ -62,9 +60,10 @@
                 margin-bottom: 30px;
             }
         </style>
+        <link href="{{asset('css/app.css')}}" rel="stylesheet">
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -79,20 +78,65 @@
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+        </div>
+        <div class="content">
+            <p class="display-4 text-center">Data Breakdown</p>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="table-responsive">
+                        <p>Data Unit Breakdown</p>
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                            <th>Unit</th>
+                            <th>Keterangan</th>
+                            <th>Lokasi</th>
+                            <th>Jam</th>
+                            <th>Status</th>
+                            <th>Kategori</th>
+                            </thead>
+                            <tbody>
+                            @foreach($breakdown as $x)
+                                <tr>
+                                    <td>{{$x->unit->code}}</td>
+                                    <td>{{$x->keterangan}}</td>
+                                    <td>{{$x->location}}</td>
+                                    <td>{{ \Carbon\Carbon::parse($x->breakdown)->format('h:i') }}</td>
+                                    <td class="bg-danger">B/D</td>
+                                    <td class="{{$x->kategori=='SCH'?'bg-info':'bg-secondary'}}">{{$x->kategori}}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="table-responsive">
+                        <p>Data Unit Ready</p>
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                            <th>Unit</th>
+                            <th>Keterangan</th>
+                            <th>Lokasi</th>
+                            <th>Jam</th>
+                            <th>Status</th>
+                            <th>Kategori</th>
+                            </thead>
+                            <tbody>
+                            @foreach($ready as $x)
+                                <tr>
+                                    <td>{{$x->unit->code}}</td>
+                                    <td>{{$x->keterangan}}</td>
+                                    <td>{{$x->location}}</td>
+                                    <td>{{ \Carbon\Carbon::parse($x->ready)->format('h:i') }}</td>
+                                    <td class="bg-success">ready</td>
+                                    <td class="{{$x->kategori=='SCH'?'bg-info':'bg-secondary'}}">{{$x->kategori}}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

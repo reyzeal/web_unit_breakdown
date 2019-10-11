@@ -31,24 +31,20 @@ class Main extends React.Component{
         });
     }
     editBreakdown(x){
-        const {log, code, kategori, keterangan, breakdown} = x;
+        const {log, code, kategori, keterangan, location} = x;
         $('#editBreakdown [name=log]').val(log);
         $('#editBreakdown [name=keterangan]').val(keterangan);
-        flatpickr('#editBreakdown .flatpick',{
-            enableTime:true,
-            dateFormat:"Y-m-d H:i:s",
-            inline: true,
-            time_24hr:true
-        }).setDate(breakdown);
         $('#editBreakdown [name=kategori]').find(`[value=${kategori}]`).attr('selected','selected');
         $('#editBreakdown [name=code]').val(code);
+        $('#editBreakdown [name=location]').val(location);
     }
     setLogReady(x){
-        const {log, code, kategori, keterangan} = x;
+        const {log, code, kategori, keterangan, location} = x;
         $('#tambahReady [name=log]').val(log);
         $('#tambahReady [name=keterangan]').val(keterangan);
         $('#tambahReady [name=kategori]').find(`[value=${kategori}]`).attr('selected','selected');
         $('#tambahReady [name=code]').val(code);
+        $('#tambahReady [name=location]').val(location);
     }
     print(){
         html2canvas(document.getElementById('table-report')).then(canvas=>{
@@ -89,6 +85,7 @@ class Main extends React.Component{
                                 <th>No</th>
                                 <th>Unit</th>
                                 <th>Keterangan</th>
+                                <th>Lokasi</th>
                                 <th>Jam</th>
                                 <th>Status</th>
                                 <th>Kategori</th>
@@ -100,14 +97,15 @@ class Main extends React.Component{
                             <td>{index+1}</td>
                             <td>{data.unit.code}</td>
                             <td>{data.keterangan}</td>
+                            <td>{data.location}</td>
                             <td>{data.breakdown}</td>
                             <td className="bg-danger">B/D</td>
                             <td className={data.kategori==="SCH"?'bg-info':'bg-secondary'}>{data.kategori}</td>
                             <td>
-                                <button className="btn btn-warning mx-1" data-toggle="modal" data-target="#editBreakdown" onClick={this.editBreakdown.bind(this,{log:data.id, kategori:data.kategori, keterangan:data.keterangan, code:data.unit.code, breakdown:data.breakdown})}>
+                                <button className="btn btn-warning mx-1" data-toggle="modal" data-target="#editBreakdown" onClick={this.editBreakdown.bind(this,{log:data.id, kategori:data.kategori, keterangan:data.keterangan, code:data.unit.code, location:data.location})}>
                                     <i className="fa fa-pencil"> </i> Edit
                                 </button>
-                                <button className="btn btn-success mx-1" data-toggle="modal" data-target="#tambahReady" onClick={this.setLogReady.bind(this,{log:data.id, kategori:data.kategori, keterangan:data.keterangan, code:data.unit.code})}>
+                                <button className="btn btn-success mx-1" data-toggle="modal" data-target="#tambahReady" onClick={this.setLogReady.bind(this,{log:data.id, kategori:data.kategori, keterangan:data.keterangan, code:data.unit.code, location:data.location})}>
                                     <i className="fa fa-check"> </i> Ready
                                 </button>
                             </td>
@@ -127,6 +125,7 @@ class Main extends React.Component{
                             <th>No</th>
                             <th>Unit</th>
                             <th>Keterangan</th>
+                            <th>Lokasi</th>
                             <th>Jam</th>
                             <th>Status</th>
                             <th>Kategori</th>
@@ -138,6 +137,7 @@ class Main extends React.Component{
                             <td>{index+1}</td>
                             <td>{data.unit.code}</td>
                             <td>{data.keterangan}</td>
+                            <td>{data.location}</td>
                             <td>{data.ready}</td>
                             <td className="bg-success">ready</td>
                             <td>{data.kategori}</td>
@@ -163,6 +163,7 @@ class Main extends React.Component{
                             <th>No</th>
                             <th>Unit</th>
                             <th>Keterangan</th>
+                            <th>Lokasi</th>
                             <th>Jam</th>
                             <th>Status</th>
                             <th>Jam</th>
@@ -176,6 +177,7 @@ class Main extends React.Component{
                             <td>{index+1}</td>
                             <td>{data.unit.code}</td>
                             <td>{data.keterangan}</td>
+                            <td>{data.location}</td>
                             <td>{data.breakdown}</td>
                             <td className="bg-danger">B/D</td>
                             <td>{data.ready?data.ready:"-"}</td>

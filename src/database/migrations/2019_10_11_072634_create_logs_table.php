@@ -18,8 +18,9 @@ class CreateLogsTable extends Migration
             $table->unsignedBigInteger('unit_id');
             $table->timestamp('breakdown')->nullable();
             $table->timestamp('ready')->nullable();
-            $table->string('kategori');
-            $table->string('keterangan');
+            $table->string('kategori')->nullable();
+            $table->string('location')->nullable();
+            $table->string('keterangan')->nullable();
             $table->timestamps();
         });
     }
