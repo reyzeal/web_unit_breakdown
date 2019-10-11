@@ -23,17 +23,17 @@ class Main extends React.Component{
 
     }
     editBreakdown(x){
-        const {code, kategori, keterangan} = x;
+        const {log, code, kategori, keterangan} = x;
         $('#editBreakdown [name=log]').val(log);
         $('#editBreakdown [name=keterangan]').val(keterangan);
-        $('#editBreakdown [name=kategori]').val(kategori);
+        $('#editBreakdown [name=kategori]').find(`[value=${kategori}]`).attr('selected','selected');
         $('#editBreakdown [name=code]').val(code);
     }
     setLogReady(x){
         const {log, code, kategori, keterangan} = x;
         $('#tambahReady [name=log]').val(log);
         $('#tambahReady [name=keterangan]').val(keterangan);
-        $('#tambahReady [name=kategori]').val(kategori);
+        $('#tambahReady [name=kategori]').find(`[value=${kategori}]`).attr('selected','selected');
         $('#tambahReady [name=code]').val(code);
     }
     print(){
