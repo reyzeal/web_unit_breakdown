@@ -13,8 +13,3 @@ require('./bootstrap');
  */
 
 require('./components/Main');
-const flatpickr = require('flatpickr');
-
-flatpickr('.flatpick',{
-    enableTime:true
-});

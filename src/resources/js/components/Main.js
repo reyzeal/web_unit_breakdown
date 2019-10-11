@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 window.html2canvas = html2canvas;
+const flatpickr = require('flatpickr');
+
+
 class Main extends React.Component{
     constructor(props){
         super(props);
@@ -20,12 +23,23 @@ class Main extends React.Component{
                 all : r.all,
             });
         });
-
+        flatpickr('.flatpick',{
+            enableTime:true,
+            dateFormat:"Y-m-d H:i:s",
+            time_24hr:true,
+            inline: true
+        });
     }
     editBreakdown(x){
-        const {log, code, kategori, keterangan} = x;
+        const {log, code, kategori, keterangan, breakdown} = x;
         $('#editBreakdown [name=log]').val(log);
         $('#editBreakdown [name=keterangan]').val(keterangan);
+        flatpickr('#editBreakdown .flatpick',{
+            enableTime:true,
+            dateFormat:"Y-m-d H:i:s",
+            inline: true,
+            time_24hr:true
+        }).setDate(breakdown);
         $('#editBreakdown [name=kategori]').find(`[value=${kategori}]`).attr('selected','selected');
         $('#editBreakdown [name=code]').val(code);
     }
@@ -89,7 +103,7 @@ class Main extends React.Component{
                             <td className="bg-danger">B/D</td>
                             <td className={data.kategori==="SCH"?'bg-info':'bg-secondary'}>{data.kategori}</td>
                             <td>
-                                <button className="btn btn-warning mx-1" data-toggle="modal" data-target="#editBreakdown" onClick={this.editBreakdown.bind(this,{log:data.id, kategori:data.kategori, keterangan:data.keterangan, code:data.unit.code})}>
+                                <button className="btn btn-warning mx-1" data-toggle="modal" data-target="#editBreakdown" onClick={this.editBreakdown.bind(this,{log:data.id, kategori:data.kategori, keterangan:data.keterangan, code:data.unit.code, breakdown:data.breakdown})}>
                                     <i className="fa fa-pencil"> </i> Edit
                                 </button>
                                 <button className="btn btn-success mx-1" data-toggle="modal" data-target="#tambahReady" onClick={this.setLogReady.bind(this,{log:data.id, kategori:data.kategori, keterangan:data.keterangan, code:data.unit.code})}>

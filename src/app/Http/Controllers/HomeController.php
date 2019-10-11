@@ -51,6 +51,7 @@ class HomeController extends Controller
             'kategori' => $request->kategori,
             'keterangan' => $request->keterangan
         ]);
+        $log->save();
 
         return redirect()->back();
     }

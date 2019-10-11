@@ -39,7 +39,7 @@
                     </div>
                     <div class="form-group">
                         <label>Breakdown Timestamp</label>
-                        <input class="form-control flatpick" type="text" name="breakdown">
+                        <input class="form-control flatpick" placeholder="Select time" type="text" name="breakdown">
                     </div>
                     <div class="form-group">
                         <label>Description</label>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="form-group">
                         <label>Breakdown Timestamp</label>
-                        <input class="form-control flatpick" type="text" name="breakdown">
+                        <input class="form-control flatpick" placeholder="Select time" type="text" name="breakdown">
                     </div>
                     <div class="form-group">
                         <label>Description</label>
@@ -109,7 +109,7 @@
         <div class="modal-dialog modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Add Unit Breakdown</h5>
+                    <h5 class="modal-title">Unit Ready</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -121,7 +121,7 @@
                     </div>
                     <div class="form-group">
                         <label>Ready Timestamp</label>
-                        <input class="form-control flatpick" type="text" name="ready">
+                        <input class="form-control flatpick" type="text" placeholder="Select time" name="ready">
                     </div>
                     <div class="form-group">
                         <label>Description</label>
