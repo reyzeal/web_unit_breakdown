@@ -130,8 +130,8 @@
                     <div class="form-group">
                         <label>Category</label>
                         <select name="kategori" class="form-control">
-                            <option>SCH</option>
-                            <option>UNSCH</option>
+                            <option value="SCH">SCH</option>
+                            <option value="UNSCH">UNSCH</option>
                         </select>
                     </div>
                 </div>
