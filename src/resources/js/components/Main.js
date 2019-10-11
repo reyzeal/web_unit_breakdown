@@ -81,6 +81,7 @@ class Main extends React.Component{
                     <button data-toggle="modal" data-target="#tambahBreakdown">
                         <i className="fa fa-gear"> </i> Add Breakdown
                     </button>
+                    <p className="display-4 text-center">Data Breakdown</p>
                     <div className="table-responsive">
                         <table className="table table-bordered my-3">
                         <thead className="thead-dark">
@@ -175,8 +176,8 @@ class Main extends React.Component{
                             <td>{data.keterangan}</td>
                             <td>{data.breakdown}</td>
                             <td className="bg-danger">B/D</td>
-                            <td>{data.ready}</td>
-                            <td className="bg-success">ready</td>
+                            <td>{data.ready?data.ready:"-"}</td>
+                            <td className={data.ready?"bg-success":""}>{data.ready?"ready":"-"}</td>
                             <td>{data.kategori}</td>
                             {/*<td>*/}
                             {/*    /!*<button className="btn btn-warning">Edit</button>*!/*/}
