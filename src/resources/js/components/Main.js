@@ -155,9 +155,9 @@ class Main extends React.Component{
                     <button onClick={this.print.bind(this)}>
                         <i className="fa fa-print"> </i> Print
                     </button>
-                    <p className="display-4 text-center">Data Breakdown</p>
-                    <div className="table-responsive">
-                        <table className="table table-bordered my-3" id="table-report">
+                    <div className="table-responsive" id="table-report">
+                        <p className="display-4 text-center">Data Breakdown</p>
+                        <table className="table table-bordered my-3">
                         <thead className="thead-dark">
                         <tr>
                             <th>No</th>
