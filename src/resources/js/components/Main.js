@@ -120,6 +120,7 @@ class Main extends React.Component{
                 <div className="tab-pane fade py-3" id="ready" role="tabpanel" aria-labelledby="ready-tab">
                     {/*<button data-toggle="modal" data-target="#tambahReady" className="btn btn-primary my-3">Tambah Ready</button>*/}
                     <div className="table-responsive">
+                        <p className="display-4 text-center">Data Breakdown</p>
                         <table className="table table-bordered my-3">
                         <thead className="thead-dark">
                         <tr>
@@ -154,6 +155,7 @@ class Main extends React.Component{
                     <button onClick={this.print.bind(this)}>
                         <i className="fa fa-print"> </i> Print
                     </button>
+                    <p className="display-4 text-center">Data Breakdown</p>
                     <div className="table-responsive">
                         <table className="table table-bordered my-3" id="table-report">
                         <thead className="thead-dark">
