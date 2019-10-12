@@ -76,8 +76,8 @@ class HomeController extends Controller
         }
         $nama = "Report.xlsx";
         $writer = IOFactory::createWriter($spreadsheet,"Xlsx");
-        $writer->save(storage_path("app\\$nama"));
-        return response()->download(storage_path("/app/$nama"))->deleteFileAfterSend(true);
+        $writer->save(storage_path("app/$nama"));
+        return response()->download(storage_path("app/$nama"))->deleteFileAfterSend(true);
     }
     public function addBreakdown(Request $request){
         $unit = Unit::where('code', $request->get('code'))->first();
