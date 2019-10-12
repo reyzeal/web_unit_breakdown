@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         @include('favicon')
-        <title>Sys.Unit.Breakdown</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -108,6 +107,9 @@
                                     <td class="{{$x->kategori=='SCH'?'bg-info':'bg-secondary'}}">{{$x->kategori}}</td>
                                 </tr>
                             @endforeach
+                            @if(!count($breakdown))
+                                <tr><td colspan="6" class="text-center">Saat ini kosong</td></tr>
+                            @endif
                             </tbody>
                         </table>
                     </div>
@@ -135,6 +137,9 @@
                                     <td class="{{$x->kategori=='SCH'?'bg-info':'bg-secondary'}}">{{$x->kategori}}</td>
                                 </tr>
                             @endforeach
+                            @if(!count($ready))
+                                <tr><td colspan="6" class="text-center">Saat ini kosong</td></tr>
+                            @endif
                             </tbody>
                         </table>
                     </div>
