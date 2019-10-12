@@ -103,7 +103,7 @@
                                     <td>{{$x->unit->code}}</td>
                                     <td>{{$x->keterangan}}</td>
                                     <td>{{$x->location}}</td>
-                                    <td>{{ \Carbon\Carbon::parse($x->breakdown)->format('h:i') }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($x->breakdown)->format('H:i') }} WITA</td>
                                     <td class="bg-danger">B/D</td>
                                     <td class="{{$x->kategori=='SCH'?'bg-info':'bg-secondary'}}">{{$x->kategori}}</td>
                                 </tr>
@@ -130,7 +130,7 @@
                                     <td>{{$x->unit->code}}</td>
                                     <td>{{$x->keterangan}}</td>
                                     <td>{{$x->location}}</td>
-                                    <td>{{ \Carbon\Carbon::parse($x->ready)->format('h:i') }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($x->ready)->format('H:i') }} WITA</td>
                                     <td class="bg-success">ready</td>
                                     <td class="{{$x->kategori=='SCH'?'bg-info':'bg-secondary'}}">{{$x->kategori}}</td>
                                 </tr>

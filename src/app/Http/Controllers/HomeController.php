@@ -31,35 +31,53 @@ class HomeController extends Controller
         return view('home');
     }
     public function download(Request $request){
-        $logs = Log::with('unit')->get();
-        $i = 2;
+        $a = \Carbon\Carbon::createFromFormat('d-m-Y H:i',$request->get('start'));
+        $b = \Carbon\Carbon::createFromFormat('d-m-Y H:i',$request->get('end'));
+        if($a > $b){
+            $c = $b;
+            $b = $a;
+            $a = $c;
+        }
+        $logs = Log::whereBetween('created_at',[$a,$b])->with('unit')->get();
+        $i = 1;
 
         $spreadsheet = new Spreadsheet();
         $worksheet = $spreadsheet->getActiveSheet();
-        $worksheet->setCellValueByColumnAndRow(1, 1, 'No');
-        $worksheet->setCellValueByColumnAndRow(2, 1, 'Unit');
-        $worksheet->setCellValueByColumnAndRow(3, 1, 'Keterangan');
-        $worksheet->setCellValueByColumnAndRow(4, 1, 'Lokasi');
-        $worksheet->setCellValueByColumnAndRow(5, 1, 'Jam');
-        $worksheet->setCellValueByColumnAndRow(6, 1, 'Status');
-        $worksheet->setCellValueByColumnAndRow(7, 1, 'Jam');
-        $worksheet->setCellValueByColumnAndRow(8, 1, 'Status');
-        $worksheet->setCellValueByColumnAndRow(9, 1, 'Kategori');
+        $worksheet->setCellValueByColumnAndRow(1, $i, 'Data Breakdown');
+        $worksheet->setCellValueByColumnAndRow(6, $i, 'Filter Date :');
+        $worksheet->setCellValueByColumnAndRow(7, $i, $a->format('d-m-Y H:i'));
+        $worksheet->setCellValueByColumnAndRow(8, $i, 'until');
+        $worksheet->setCellValueByColumnAndRow(9, $i, $b->format('d-m-Y H:i'));
+        $worksheet->setCellValueByColumnAndRow(10, $i, 'Server Timezone:');
+        $worksheet->setCellValueByColumnAndRow(11, $i++, 'Asia/Makassar');
+        $worksheet->setCellValueByColumnAndRow(1, $i, 'No');
+        $worksheet->setCellValueByColumnAndRow(2, $i, 'Unit');
+        $worksheet->setCellValueByColumnAndRow(3, $i, 'Keterangan');
+        $worksheet->setCellValueByColumnAndRow(4, $i, 'Lokasi');
+        $worksheet->setCellValueByColumnAndRow(5, $i, 'Tanggal');
+        $worksheet->setCellValueByColumnAndRow(6, $i, 'Jam');
+        $worksheet->setCellValueByColumnAndRow(7, $i, 'Status');
+        $worksheet->setCellValueByColumnAndRow(8, $i, 'Tanggal');
+        $worksheet->setCellValueByColumnAndRow(9, $i, 'Jam');
+        $worksheet->setCellValueByColumnAndRow(10, $i, 'Status');
+        $worksheet->setCellValueByColumnAndRow(11, $i++, 'Kategori');
         foreach ($logs as $log){
             $worksheet->setCellValueByColumnAndRow(1,$i, $i-1);
             $worksheet->setCellValueByColumnAndRow(2,$i, $log->unit->code);
             $worksheet->setCellValueByColumnAndRow(3,$i, $log->keterangan);
             $worksheet->setCellValueByColumnAndRow(4,$i, $log->location);
-            $worksheet->setCellValueByColumnAndRow(5,$i, $log->breakdown);
-            $worksheet->setCellValueByColumnAndRow(6,$i, 'B/D');
-            $worksheet->setCellValueByColumnAndRow(7,$i, $log->ready);
-            $worksheet->setCellValueByColumnAndRow(8,$i, 'ready');
-            $worksheet->setCellValueByColumnAndRow(9,$i++, $log->kategori);
+            $worksheet->setCellValueByColumnAndRow(5,$i, \Carbon\Carbon::parse($log->breakdown)->format('d-m-Y'));
+            $worksheet->setCellValueByColumnAndRow(6,$i, \Carbon\Carbon::parse($log->breakdown)->format('H:i'));
+            $worksheet->setCellValueByColumnAndRow(7,$i, 'B/D');
+            $worksheet->setCellValueByColumnAndRow(8,$i, \Carbon\Carbon::parse($log->ready)->format('d-m-Y'));
+            $worksheet->setCellValueByColumnAndRow(9,$i, \Carbon\Carbon::parse($log->ready)->format('H:i'));
+            $worksheet->setCellValueByColumnAndRow(10,$i, 'ready');
+            $worksheet->setCellValueByColumnAndRow(11,$i++, $log->kategori);
         }
         $nama = "Report.xlsx";
         $writer = IOFactory::createWriter($spreadsheet,"Xlsx");
         $writer->save(storage_path("app\\$nama"));
-        return response()->download(storage_path("app\\$nama"))->deleteFileAfterSend(true);
+        return response()->download(storage_path("/app/$nama"))->deleteFileAfterSend(true);
     }
     public function addBreakdown(Request $request){
         $unit = Unit::where('code', $request->get('code'))->first();
@@ -87,7 +105,6 @@ class HomeController extends Controller
             'keterangan' => $request->keterangan
         ]);
         $log->save();
-
         return redirect()->back();
     }
 
@@ -111,11 +128,23 @@ class HomeController extends Controller
     public function resource(Request $request){
         $breakdown = \App\Log::whereNull('ready')->with('unit')->get();
         $ready = \App\Log::whereNotNull('ready')->where('ready','>', now()->subHours(12))->with('unit')->get();
-
+        $a = $request->get('start')?\Carbon\Carbon::createFromFormat('d-m-Y H:i',$request->get('start')):now()->subDay();
+        $b = $request->get('end')?\Carbon\Carbon::createFromFormat('d-m-Y H:i',$request->get('end')):now();
+        if($a > $b){
+            $c = $b;
+            $b = $a;
+            $a = $c;
+        }
         return response()->json([
             'breakdown' => $breakdown,
             'ready' => $ready,
-            'all' => \App\Log::all()
+            'all' => \App\Log::whereBetween('created_at',[$a,$b])->orWhereBetween('breakdown',[$a,$b])->orWhereBetween('ready',[$a,$b])->get(),
+            'startDate' => $a->format('d-m-Y'),
+            'startH' => $a->format('H'),
+            'startM' => $a->format('i'),
+            'endDate' => $b->format('d-m-Y'),
+            'endH' => $b->format('H'),
+            'endM' => $b->format('i'),
         ],200);
     }
 }

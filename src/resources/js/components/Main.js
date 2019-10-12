@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
-window.html2canvas = html2canvas;
+const moment = require('moment');
 const flatpickr = require('flatpickr');
 
 
@@ -13,21 +11,69 @@ class Main extends React.Component{
             breakdown : [],
             ready : [],
             all : [],
+            startDate : '',
+            endDate : '',
+            endH : '',
+            endM : '',
+            startH : '',
+            startM : '',
+            loading: false,
+            time : moment().format('D-M-Y HH:mm:ss'),
+        };
+        this.query = {
+            start : null,
+            end : null
         }
     }
+    timer(){
+        this.setState({
+            time: moment().format('D-M-Y HH:mm:ss')
+        });
+    }
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+    }
+
     componentDidMount() {
-        fetch('/resource').then(r => r.json()).then(r => {
+        this.timeriD = setInterval(this.timer.bind(this), 1000);
+        this.setState({loading: true});
+        let url = '/resource' + ((this.query.start === this.query.end && this.query.start === null)?'':'?'+$.param(this.query));
+        fetch(url).then(r => r.json()).then(r => {
             this.setState({
                 breakdown : r.breakdown,
                 ready : r.ready,
                 all : r.all,
+                startDate : r.startDate,
+                endDate : r.endDate,
+                endH : parseInt(r.endH),
+                endM : parseInt(r.endM),
+                startH : parseInt(r.startH),
+                startM : parseInt(r.startM),
+                loading : false,
             });
-        });
-        flatpickr('.flatpick',{
-            enableTime:true,
-            dateFormat:"Y-m-d H:i:s",
-            time_24hr:true,
-            inline: true
+            let start = `${r.startDate} ${r.startH}:${r.startM}`;
+            let end = `${r.endDate} ${r.endH}:${r.endM}`;
+            flatpickr('.flatpick[name=startDate]',{
+                enableTime:true,
+                defaultDate:this.state.startDate,
+                defaultHour:this.state.startH,
+                defaultMinute:this.state.startM,
+                dateFormat:"d-m-Y H:i",
+                time_24hr:true,
+                onClose: (a,b,c) => this.gantiWaktu('start', b)
+            }).setDate(start);
+            flatpickr('.flatpick[name=endDate]',{
+                enableTime:true,
+                defaultDate:this.state.endDate,
+                defaultHour:this.state.endH,
+                defaultMinute:this.state.endM,
+                dateFormat:"d-m-Y H:i",
+                time_24hr:true,
+                onClose: (a,b,c) => this.gantiWaktu('end', b)
+            }).setDate(end);
+            // console.log('initial',start,end);
+            this.query.start = start;
+            this.query.end = end;
         });
     }
     editBreakdown(x){
@@ -46,18 +92,19 @@ class Main extends React.Component{
         $('#tambahReady [name=code]').val(code);
         $('#tambahReady [name=location]').val(location);
     }
-    print(){
-        html2canvas(document.getElementById('table-report')).then(canvas=>{
-            let doc = new jsPDF({orientation:'landscape'});
-            let img = canvas.toDataURL("image/png");
-            doc.addImage(img,'JPEG',10,10);
-            doc.save('report.pdf');
-        });
+    gantiWaktu(i,b){
+        this.query[i] = b;
+        this.componentDidMount();
     }
 
     render() {
         const {breakdown, ready, all} = this.state;
         return <div>
+            <div>
+                <div className={!this.state.loading?'d-block w-100':'d-none'}>
+                    <p className="text-muted p-1 float-right">{this.state.time}</p>
+                </div>
+            </div>
             <ul className="nav nav-tabs" id="myTab" role="tablist">
                 <li className="nav-item">
                     <a className="nav-link active" id="breakdown-tab" data-toggle="tab" href="#breakdown" role="tab"
@@ -86,6 +133,7 @@ class Main extends React.Component{
                                 <th>Unit</th>
                                 <th>Keterangan</th>
                                 <th>Lokasi</th>
+                                <th>Tanggal</th>
                                 <th>Jam</th>
                                 <th>Status</th>
                                 <th>Kategori</th>
@@ -98,7 +146,8 @@ class Main extends React.Component{
                             <td>{data.unit.code}</td>
                             <td>{data.keterangan}</td>
                             <td>{data.location}</td>
-                            <td>{data.breakdown}</td>
+                            <td>{moment(data.breakdown).format('D-M-Y')}</td>
+                            <td>{moment(data.breakdown).format('HH:mm')+' WITA'}</td>
                             <td className="bg-danger">B/D</td>
                             <td className={data.kategori==="SCH"?'bg-info':'bg-secondary'}>{data.kategori}</td>
                             <td>
@@ -126,6 +175,7 @@ class Main extends React.Component{
                             <th>Unit</th>
                             <th>Keterangan</th>
                             <th>Lokasi</th>
+                            <th>Tanggal</th>
                             <th>Jam</th>
                             <th>Status</th>
                             <th>Kategori</th>
@@ -138,7 +188,8 @@ class Main extends React.Component{
                             <td>{data.unit.code}</td>
                             <td>{data.keterangan}</td>
                             <td>{data.location}</td>
-                            <td>{data.ready}</td>
+                            <td>{moment(data.ready).format('D-M-Y')}</td>
+                            <td>{moment(data.ready).format('HH:mm')+' WITA'}</td>
                             <td className="bg-success">ready</td>
                             <td>{data.kategori}</td>
                             {/*<td>*/}
@@ -152,16 +203,34 @@ class Main extends React.Component{
                     </div>
                 </div>
                 <div className="tab-pane fade py-3" id="report" role="tabpanel" aria-labelledby="report-tab">
-                    <div className="d-flex flex-row-reverse">
-                        <button className="btn btn-outline-primary" onClick={this.print.bind(this)}>
-                            <i className="fa fa-file-pdf-o"> </i> Print PDF
-                        </button>
-                        <a className="btn btn-outline-primary" href="/download">
-                            <i className="fa fa-file-excel-o"> </i> Print Excel
-                        </a>
-                    </div>
                     <div className="table-responsive" id="table-report">
                         <p className="display-4 text-center">Data Breakdown</p>
+                        <div className="d-flex justify-content-center">
+                            <div className={this.state.loading?'d-block':'d-none'}>
+                                <div className="spinner-grow text-primary" role="status">
+                                    <span className="sr-only">Loading...</span>
+                                </div>
+                                <div className="spinner-grow text-secondary" role="status">
+                                    <span className="sr-only">Loading...</span>
+                                </div>
+                                <div className="spinner-grow text-success" role="status">
+                                    <span className="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="d-flex flex-row-reverse">
+                            <a className="btn btn-outline-primary mx-2" href={"/download?"+$.param(this.query)}>
+                                <i className="fa fa-file-excel-o"> </i> Print Excel
+                            </a>
+                            <div className="align-items-center">
+                                end date:
+                                <input name="endDate" className='flatpick' onChange={this.gantiWaktu.bind(this)}/>
+                            </div>
+                            <div className="align-items-center">
+                                start date:
+                                <input name="startDate" className='flatpick' onChange={this.gantiWaktu.bind(this)}/>
+                            </div>
+                        </div>
                         <table className="table table-bordered my-3">
                         <thead className="thead-dark">
                         <tr>
@@ -169,8 +238,10 @@ class Main extends React.Component{
                             <th>Unit</th>
                             <th>Keterangan</th>
                             <th>Lokasi</th>
+                            <th>Tanggal</th>
                             <th>Jam</th>
                             <th>Status</th>
+                            <th>Tanggal</th>
                             <th>Jam</th>
                             <th>Status</th>
                             <th>Kategori</th>
@@ -183,9 +254,11 @@ class Main extends React.Component{
                             <td>{data.unit.code}</td>
                             <td>{data.keterangan}</td>
                             <td>{data.location}</td>
-                            <td>{data.breakdown}</td>
+                            <td>{moment(data.breakdown).format('D-M-Y')}</td>
+                            <td>{moment(data.breakdown).format('HH:mm')+' WITA'}</td>
                             <td className="bg-danger">B/D</td>
-                            <td>{data.ready?data.ready:"-"}</td>
+                            <td>{data.ready?moment(data.ready).format('D-M-Y'):''}</td>
+                            <td>{data.ready?moment(data.ready).format('HH:mm')+' WITA':''}</td>
                             <td className={data.ready?"bg-success":""}>{data.ready?"ready":"-"}</td>
                             <td>{data.kategori}</td>
                             {/*<td>*/}
