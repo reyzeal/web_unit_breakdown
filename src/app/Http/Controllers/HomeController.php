@@ -62,7 +62,7 @@ class HomeController extends Controller
         $worksheet->setCellValueByColumnAndRow(10, $i, 'Status');
         $worksheet->setCellValueByColumnAndRow(11, $i++, 'Kategori');
         foreach ($logs as $log){
-            $worksheet->setCellValueByColumnAndRow(1,$i, $i-1);
+            $worksheet->setCellValueByColumnAndRow(1,$i, $i-2);
             $worksheet->setCellValueByColumnAndRow(2,$i, $log->unit->code);
             $worksheet->setCellValueByColumnAndRow(3,$i, $log->keterangan);
             $worksheet->setCellValueByColumnAndRow(4,$i, $log->location);

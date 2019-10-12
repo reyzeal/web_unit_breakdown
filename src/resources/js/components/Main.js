@@ -159,7 +159,7 @@ class Main extends React.Component{
                                 </button>
                             </td>
                         </tr>))}
-                        {!breakdown.length?<tr><td className="text-center" colSpan={7}>Saat ini kosong</td></tr>:''}
+                        {!breakdown.length?<tr><td className="text-center" colSpan={8}>Saat ini kosong</td></tr>:''}
                         </tbody>
                     </table>
                     </div>
@@ -197,7 +197,7 @@ class Main extends React.Component{
                             {/*    <button className="btn btn-success">Ready</button>*/}
                             {/*</td>*/}
                         </tr>))}
-                        {!ready.length?<tr><td className="text-center" colSpan={6}>Saat ini kosong</td></tr>:''}
+                        {!ready.length?<tr><td className="text-center" colSpan={7}>Saat ini kosong</td></tr>:''}
                         </tbody>
                     </table>
                     </div>
@@ -266,7 +266,7 @@ class Main extends React.Component{
                             {/*    <button className="btn btn-success">Ready</button>*/}
                             {/*</td>*/}
                         </tr>))}
-                        {!all.length?<tr><td className="text-center" colSpan={8}>Saat ini kosong</td></tr>:''}
+                        {!all.length?<tr><td className="text-center" colSpan={11}>Saat ini kosong</td></tr>:''}
                         </tbody>
                     </table>
                     </div>
