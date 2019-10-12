@@ -100,11 +100,11 @@ class Main extends React.Component{
     render() {
         const {breakdown, ready, all} = this.state;
         return <div>
-            <div>
-                <div className={!this.state.loading?'d-block w-100':'d-none'}>
-                    <p className="text-muted p-1 float-right">{this.state.time}</p>
-                </div>
+
+            <div style={{height:'50px'}} className={!this.state.loading?'d-block w-100':'d-none'}>
+                <p className="text-muted p-1 float-right">{this.state.time}</p>
             </div>
+
             <ul className="nav nav-tabs" id="myTab" role="tablist">
                 <li className="nav-item">
                     <a className="nav-link active" id="breakdown-tab" data-toggle="tab" href="#breakdown" role="tab"
