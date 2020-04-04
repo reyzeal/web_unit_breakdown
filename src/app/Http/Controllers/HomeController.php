@@ -96,17 +96,16 @@ class HomeController extends Controller
         return redirect()->back();
     }
     public function editBreakdown(Request $request){
-
         $unit = Unit::where('code', $request->get('code'))->first();
         if(!$unit) $unit = Unit::create(['code' => $request->get('code')]);
         $log = Log::find($request->log);
         if(Auth::user()->level==2){
             $log->fill([
                 'unit_id' => $unit->id,
-                'breakdown' => now(),
                 'kategori' => $request->kategori,
                 'location' => $request->location,
-                'keterangan' => $request->keterangan
+                'keterangan' => $request->keterangan,
+                'checked' => false
             ]);
         }else{
             $jam = explode(':',$request->breakdown);
@@ -118,7 +117,8 @@ class HomeController extends Controller
                 'breakdown' => $time,
                 'kategori' => $request->kategori,
                 'location' => $request->location,
-                'keterangan' => $request->keterangan
+                'keterangan' => $request->keterangan,
+                'checked' => false
             ]);
         }
 
@@ -136,7 +136,8 @@ class HomeController extends Controller
             'ready' => now(),
             'kategori' => $request->kategori,
             'keterangan' => $request->keterangan,
-            'location' => $request->location
+            'location' => $request->location,
+            'checked' => false
         ]);
 
         $log->save();

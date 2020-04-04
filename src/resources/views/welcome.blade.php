@@ -134,7 +134,7 @@
                                                 @if(\Auth::user()->level == 2)
                                                     <a href="#" onclick="confirmNotif({{$x->id}}, '{{$x->unit->code}}')">Checked</a>
                                                 @else
-                                                    <span class="disabled" href="">Checked</span>
+                                                    <span class="disabled">Checked</span>
                                                 @endif
                                             </td>
                                         @endif
@@ -165,9 +165,9 @@
                                             <td>{{$x->unit->code}}</td>
                                             <td class="link">
                                                 @if(\Auth::user()->level != 2)
-                                                    <a href="#" onclick="confirmNotif('{!! $x !!}')">Checked</a>
+                                                    <a href="#" onclick="confirmNotif({{$x->id}}, '{{$x->unit->code}}')">Checked</a>
                                                 @else
-                                                    <span class="disabled" href="">Checked</span>
+                                                    <span class="disabled">Checked</span>
                                                 @endif
                                             </td>
                                         @endif
