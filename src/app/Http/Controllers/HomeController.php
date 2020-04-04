@@ -8,7 +8,6 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
 class HomeController extends Controller
@@ -130,7 +129,6 @@ class HomeController extends Controller
         $unit = Unit::where('code', $request->get('code'))->first();
         if(!$unit) $unit = Unit::create(['code' => $request->get('code')]);
         $log = Log::find($request->log);
-
         $log->fill([
             'unit_id' => $unit->id,
             'ready' => now(),
