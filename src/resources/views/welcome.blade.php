@@ -59,6 +59,35 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .table-notif {
+                line-height: 10px;
+            }
+            .table-notif thead {
+                background: #1b1e21;
+                color: white;
+            }
+            .table-notif .link {
+                display: block;
+                padding: 0;
+            }
+            .table-notif a {
+                display: block;
+                width: 100%;
+                height: 30px;
+                background: #2fa360;
+                text-align: center;
+                line-height: 30px;
+                color: black;
+            }
+            .table-notif span.disabled {
+                display: block;
+                width: 100%;
+                height: 30px;
+                background: #1b1e21;
+                text-align: center;
+                line-height: 30px;
+                color: whitesmoke;
+            }
         </style>
         <link href="{{asset('css/app.css')}}" rel="stylesheet">
     </head>
@@ -80,6 +109,99 @@
 
 
         </div>
+        @auth()
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <p>Notifikasi Unit Breakdown</p>
+                        <table class="table table-bordered table-notif">
+                            <thead>
+                            <tr>
+                                <th>UNIT</th>
+                                <th>STATUS</th>
+                                <th>UNIT</th>
+                                <th>STATUS</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($notif_breakdown as $x)
+                                @if($loop->first)
+                                    <tr>
+                                        @endif
+                                        @if(!$x->checked)
+                                            <td>{{$x->unit->code}}</td>
+                                            <td class="link">
+                                                @if(\Auth::user()->level == 2)
+                                                    <a href="#" onclick="confirmNotif({{$x->id}}, '{{$x->unit->code}}')">Checked</a>
+                                                @else
+                                                    <span class="disabled" href="">Checked</span>
+                                                @endif
+                                            </td>
+                                        @endif
+                                        @if($loop->last || $loop->iteration % 2 == 0)
+                                    </tr>
+                                @endif
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <p class="text-right">Notifikasi Unit Ready</p>
+                        <table class="table table-bordered table-notif">
+                            <thead>
+                            <tr>
+                                <th>UNIT</th>
+                                <th>STATUS</th>
+                                <th>UNIT</th>
+                                <th>STATUS</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($notif_ready as $x)
+                                @if($loop->first)
+                                    <tr>
+                                        @endif
+                                        @if(!$x->checked)
+                                            <td>{{$x->unit->code}}</td>
+                                            <td class="link">
+                                                @if(\Auth::user()->level != 2)
+                                                    <a href="#" onclick="confirmNotif('{!! $x !!}')">Checked</a>
+                                                @else
+                                                    <span class="disabled" href="">Checked</span>
+                                                @endif
+                                            </td>
+                                        @endif
+                                        @if($loop->last || $loop->iteration % 2 == 0)
+                                    </tr>
+                                @endif
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <script>
+                    function confirmNotif(id, log) {
+                        let bool = confirm(`Anda yakin mengkonfirmasi notifikasi Unit ${log}?`);
+                        if(bool === true){
+                            let xhr = new XMLHttpRequest();
+                            xhr.open('POST', '{{route('notifikasi')}}');
+                            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                            xhr.onload = function() {
+                                if (xhr.status === 200) {
+                                    setTimeout(function () {
+                                        window.location.reload();
+                                    },1000);
+                                }
+                                else {
+                                    alert('Request failed.  Returned status of ' + xhr.status);
+                                }
+                            };
+                            xhr.send(encodeURI('_token={{csrf_token()}}&log='+id));
+                        }
+                    }
+                </script>
+            </div>
+        @endauth
         <div class="content">
             <p class="display-4 text-center">Data Breakdown</p>
 

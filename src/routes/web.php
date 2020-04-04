@@ -17,12 +17,27 @@ Route::any('logout', 'Auth\LoginController@logout')->name('logout');
 
 
 Route::get('/', function (){
-    $breakdown = \App\Log::whereNull('ready')->with('unit')->get();
-    $ready = \App\Log::whereNotNull('ready')->where('ready','>', now()->subHours(12))->with('unit')->get();
-
+    $breakdown = \App\Log::whereNull('ready')
+        ->with('unit')
+        ->get();
+    $ready = \App\Log::whereNotNull('ready')
+        ->where('ready','>', now()->subHours(12))
+        ->with('unit')
+        ->get();
+    $notif_breakdown = \App\Log::whereNull('ready')
+        ->where('checked',false)
+        ->with('unit')
+        ->get();
+    $notif_ready = \App\Log::whereNotNull('ready')
+        ->where('ready','>', now()->subHours(12))
+        ->where('checked',false)
+        ->with('unit')
+        ->get();
     return view('welcome')->with([
         'breakdown' => $breakdown,
         'ready' => $ready,
+        'notif_breakdown' => $notif_breakdown,
+        'notif_ready' => $notif_ready,
     ]);
 });
 Route::get('/home', 'HomeController@index')->name('home');
@@ -31,3 +46,4 @@ Route::get('/download', 'HomeController@download')->name('download');
 Route::post('/breakdown','HomeController@addBreakdown')->name('breakdown');
 Route::post('/edit/breakdown','HomeController@editBreakdown')->name('edit.breakdown');
 Route::post('/ready','HomeController@addReady')->name('ready');
+Route::post('/notifikasi','HomeController@notifikasi')->name('notifikasi');

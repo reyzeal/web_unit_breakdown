@@ -19,6 +19,7 @@ class Main extends React.Component{
             startM : '',
             loading: false,
             time : moment().format('D-M-Y HH:mm:ss'),
+            data : window.userdata
         };
         this.query = {
             start : null,
@@ -76,22 +77,43 @@ class Main extends React.Component{
             this.query.end = end;
         });
     }
+
     editBreakdown(x){
-        const {log, code, kategori, keterangan, location} = x;
+        const {log, code, kategori, keterangan, location, breakdown} = x;
         $('#editBreakdown [name=log]').val(log);
         $('#editBreakdown [name=keterangan]').val(keterangan);
         $('#editBreakdown [name=kategori]').find(`[value=${kategori}]`).attr('selected','selected');
         $('#editBreakdown [name=code]').val(code);
         $('#editBreakdown [name=location]').val(location);
+        $('#editBreakdown [name=breakdown]').flatpickr({
+            enableTime:true,
+            time_24hr:true,
+            noCalendar:true,
+            defaultHour:moment(breakdown).format('HH'),
+            defaultMinute:moment(breakdown).format('mm'),
+        });
+        $('#editBreakdown [name=breakdown]').val(moment(breakdown).format('HH:mm'));
+        $('#editBreakdown .breakdown-toggle').css('display',this.state.data.level!==2?'block':'none');
     }
+
     setLogReady(x){
-        const {log, code, kategori, keterangan, location} = x;
+        const {log, code, kategori, keterangan, location, breakdown} = x;
         $('#tambahReady [name=log]').val(log);
         $('#tambahReady [name=keterangan]').val(keterangan);
         $('#tambahReady [name=kategori]').find(`[value=${kategori}]`).attr('selected','selected');
         $('#tambahReady [name=code]').val(code);
         $('#tambahReady [name=location]').val(location);
+        $('#tambahReady [name=breakdown]').flatpickr({
+            enableTime:true,
+            time_24hr:true,
+            noCalendar:true,
+            defaultHour:moment(breakdown).format('HH'),
+            defaultMinute:moment(breakdown).format('mm'),
+        });
+        $('#tambahReady [name=breakdown]').val(moment(breakdown).format('HH:mm'));
+        $('#tambahReady .breakdown-toggle').css('display',this.state.data.level!==2?'block':'none');
     }
+
     gantiWaktu(i,b){
         this.query[i] = b;
         this.componentDidMount();
@@ -151,10 +173,10 @@ class Main extends React.Component{
                             <td className="bg-danger">B/D</td>
                             <td className={data.kategori==="SCH"?'bg-info':'bg-secondary'}>{data.kategori}</td>
                             <td>
-                                <button className="btn btn-warning mx-1" data-toggle="modal" data-target="#editBreakdown" onClick={this.editBreakdown.bind(this,{log:data.id, kategori:data.kategori, keterangan:data.keterangan, code:data.unit.code, location:data.location})}>
+                                <button className="btn btn-warning mx-1" data-toggle="modal" data-target="#editBreakdown" onClick={this.editBreakdown.bind(this,{log:data.id, kategori:data.kategori, keterangan:data.keterangan, code:data.unit.code, location:data.location, breakdown:data.breakdown})}>
                                     <i className="fa fa-pencil"> </i> Edit
                                 </button>
-                                <button className="btn btn-success mx-1" data-toggle="modal" data-target="#tambahReady" onClick={this.setLogReady.bind(this,{log:data.id, kategori:data.kategori, keterangan:data.keterangan, code:data.unit.code, location:data.location})}>
+                                <button className="btn btn-success mx-1" data-toggle="modal" data-target="#tambahReady" onClick={this.setLogReady.bind(this,{log:data.id, kategori:data.kategori, keterangan:data.keterangan, code:data.unit.code, location:data.location,  breakdown:data.breakdown})}>
                                     <i className="fa fa-check"> </i> Ready
                                 </button>
                             </td>

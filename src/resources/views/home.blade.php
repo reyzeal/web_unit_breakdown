@@ -93,6 +93,10 @@
                             <option value="UNSCH">UNSCH</option>
                         </select>
                     </div>
+                    <div class="form-group breakdown-toggle">
+                        <label>Jam</label>
+                        <input class="form-control" type="date" name="breakdown">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Save changes</button>
@@ -134,6 +138,10 @@
                             <option value="UNSCH">UNSCH</option>
                         </select>
                     </div>
+                    <div class="form-group breakdown-toggle">
+                        <label>Jam</label>
+                        <input class="form-control" type="date" name="breakdown">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Save changes</button>
@@ -143,4 +151,7 @@
         </div>
     </form>
 </div>
+<script>
+    window.userdata = {!! json_encode($user) !!};
+</script>
 @endsection

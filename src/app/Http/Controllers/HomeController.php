@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Log;
 use App\Unit;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use PhpOffice\PhpSpreadsheet\IOFactory;
@@ -28,7 +30,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = Auth::user();
+        return view('home')->with(['user' => $user]);
     }
     public function download(Request $request){
         $a = \Carbon\Carbon::createFromFormat('d-m-Y H:i',$request->get('start'));
@@ -93,17 +96,32 @@ class HomeController extends Controller
         return redirect()->back();
     }
     public function editBreakdown(Request $request){
+
         $unit = Unit::where('code', $request->get('code'))->first();
         if(!$unit) $unit = Unit::create(['code' => $request->get('code')]);
         $log = Log::find($request->log);
+        if(Auth::user()->level==2){
+            $log->fill([
+                'unit_id' => $unit->id,
+                'breakdown' => now(),
+                'kategori' => $request->kategori,
+                'location' => $request->location,
+                'keterangan' => $request->keterangan
+            ]);
+        }else{
+            $jam = explode(':',$request->breakdown);
+            $time = new Carbon($log->breakdown);
+            $time->hour = $jam[0];
+            $time->minute = $jam[1];
+            $log->fill([
+                'unit_id' => $unit->id,
+                'breakdown' => $time,
+                'kategori' => $request->kategori,
+                'location' => $request->location,
+                'keterangan' => $request->keterangan
+            ]);
+        }
 
-        $log->fill([
-            'unit_id' => $unit->id,
-            'breakdown' => now(),
-            'kategori' => $request->kategori,
-            'location' => $request->location,
-            'keterangan' => $request->keterangan
-        ]);
         $log->save();
         return redirect()->back();
     }
@@ -146,5 +164,16 @@ class HomeController extends Controller
             'endH' => $b->format('H'),
             'endM' => $b->format('i'),
         ],200);
+    }
+
+    public function notifikasi(Request $request){
+        $log = Log::find($request->log);
+        if (Auth::user()->level == 2 && !$log->ready){
+            $log->checked = true;
+            $log->save();
+        }elseif(Auth::user()->level != 2 && $log->ready){
+            $log->checked = true;
+            $log->save();
+        }
     }
 }
