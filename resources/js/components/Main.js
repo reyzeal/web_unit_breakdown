@@ -97,7 +97,7 @@ class Main extends React.Component{
     }
 
     editReady(x){
-        const {log, code, kategori, keterangan, location, breakdown} = x;
+        const {log, code, kategori, keterangan, location, ready} = x;
         $('#editReady [name=log]').val(log);
         $('#editReady [name=keterangan]').val(keterangan);
         $('#editReady [name=kategori]').find(`[value=${kategori}]`).attr('selected','selected');
@@ -110,7 +110,7 @@ class Main extends React.Component{
             defaultHour:moment(breakdown).format('HH'),
             defaultMinute:moment(breakdown).format('mm'),
         });
-        $('#editReady [name=ready]').val(moment(breakdown).format('HH:mm'));
+        $('#editReady [name=ready]').val(moment(ready).format('HH:mm'));
         $('#editReady .ready-toggle').css('display',this.state.data.level!==2?'block':'none');
     }
 
@@ -128,7 +128,7 @@ class Main extends React.Component{
             defaultHour:moment(breakdown).format('HH'),
             defaultMinute:moment(breakdown).format('mm'),
         });
-        $('#tambahReady [name=ready]').val(moment(breakdown).format('HH:mm'));
+        $('#tambahReady [name=ready]').val(moment(ready).format('HH:mm'));
         $('#tambahReady .ready-toggle').css('display',this.state.data.level!==2?'block':'none');
     }
 
