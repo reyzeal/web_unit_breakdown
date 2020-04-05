@@ -115,7 +115,7 @@ class Main extends React.Component{
     }
 
     setLogReady(x){
-        const {log, code, kategori, keterangan, location, breakdown} = x;
+        const {log, code, kategori, keterangan, location, ready} = x;
         $('#tambahReady [name=log]').val(log);
         $('#tambahReady [name=keterangan]').val(keterangan);
         $('#tambahReady [name=kategori]').find(`[value=${kategori}]`).attr('selected','selected');
@@ -234,7 +234,7 @@ class Main extends React.Component{
                             <td>{data.kategori}</td>
                             <td>
                                 {/*<button className="btn btn-warning">Edit</button>*/}
-                                <button className="btn btn-warning mx-1" data-toggle="modal" data-target="#editReady" onClick={this.editReady.bind(this,{log:data.id, kategori:data.kategori, keterangan:data.keterangan, code:data.unit.code, location:data.location, breakdown:data.breakdown})}>
+                                <button className="btn btn-warning mx-1" data-toggle="modal" data-target="#editReady" onClick={this.editReady.bind(this,{log:data.id, kategori:data.kategori, keterangan:data.keterangan, code:data.unit.code, location:data.location, ready:data.ready})}>
                                     <i className="fa fa-pencil"> </i> Edit
                                 </button>
                             </td>
