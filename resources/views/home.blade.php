@@ -79,7 +79,7 @@
                         <input class="form-control" type="text" name="code">
                     </div>
                     <div class="form-group">
-                        <label>Breakdown Timestamp</label>
+                        <label>Breakdown Location</label>
                         <input class="form-control" type="text" name="location">
                     </div>
                     <div class="form-group">
@@ -124,7 +124,7 @@
                         <input class="form-control" type="text" name="code">
                     </div>
                     <div class="form-group">
-                        <label>Breakdown Timestamp</label>
+                        <label>Location</label>
                         <input class="form-control" type="text" name="location">
                     </div>
                     <div class="form-group">
