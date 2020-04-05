@@ -107,8 +107,8 @@ class Main extends React.Component{
             enableTime:true,
             time_24hr:true,
             noCalendar:true,
-            defaultHour:moment(breakdown).format('HH'),
-            defaultMinute:moment(breakdown).format('mm'),
+            defaultHour:moment(ready).format('HH'),
+            defaultMinute:moment(ready).format('mm'),
         });
         $('#editReady [name=ready]').val(moment(ready).format('HH:mm'));
         $('#editReady .ready-toggle').css('display',this.state.data.level!==2?'block':'none');
