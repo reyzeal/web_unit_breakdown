@@ -137,13 +137,13 @@ class HomeController extends Controller
                 'checked' => false
             ]);
         }else{
-            $jam = explode(':',$request->breakdown);
-            $time = new Carbon($log->breakdown);
+            $jam = explode(':',$request->ready);
+            $time = new Carbon($log->ready);
             $time->hour = $jam[0];
             $time->minute = $jam[1];
             $log->fill([
                 'unit_id' => $unit->id,
-                'breakdown' => $time,
+                'ready' => $time,
                 'kategori' => $request->kategori,
                 'location' => $request->location,
                 'keterangan' => $request->keterangan,

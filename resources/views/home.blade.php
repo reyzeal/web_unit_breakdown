@@ -138,9 +138,9 @@
                             <option value="UNSCH">UNSCH</option>
                         </select>
                     </div>
-                    <div class="form-group breakdown-toggle">
+                    <div class="form-group ready-toggle">
                         <label>Jam</label>
-                        <input class="form-control" type="date" name="breakdown">
+                        <input class="form-control" type="date" name="ready">
                     </div>
                 </div>
                 <div class="modal-footer">

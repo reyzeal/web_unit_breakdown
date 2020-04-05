@@ -103,15 +103,15 @@ class Main extends React.Component{
         $('#editReady [name=kategori]').find(`[value=${kategori}]`).attr('selected','selected');
         $('#editReady [name=code]').val(code);
         $('#editReady [name=location]').val(location);
-        $('#editReady [name=breakdown]').flatpickr({
+        $('#editReady [name=ready]').flatpickr({
             enableTime:true,
             time_24hr:true,
             noCalendar:true,
             defaultHour:moment(breakdown).format('HH'),
             defaultMinute:moment(breakdown).format('mm'),
         });
-        $('#editReady [name=breakdown]').val(moment(breakdown).format('HH:mm'));
-        $('#editReady .breakdown-toggle').css('display',this.state.data.level!==2?'block':'none');
+        $('#editReady [name=ready]').val(moment(breakdown).format('HH:mm'));
+        $('#editReady .ready-toggle').css('display',this.state.data.level!==2?'block':'none');
     }
 
     setLogReady(x){
@@ -121,15 +121,15 @@ class Main extends React.Component{
         $('#tambahReady [name=kategori]').find(`[value=${kategori}]`).attr('selected','selected');
         $('#tambahReady [name=code]').val(code);
         $('#tambahReady [name=location]').val(location);
-        $('#tambahReady [name=breakdown]').flatpickr({
+        $('#tambahReady [name=ready]').flatpickr({
             enableTime:true,
             time_24hr:true,
             noCalendar:true,
             defaultHour:moment(breakdown).format('HH'),
             defaultMinute:moment(breakdown).format('mm'),
         });
-        $('#tambahReady [name=breakdown]').val(moment(breakdown).format('HH:mm'));
-        $('#tambahReady .breakdown-toggle').css('display',this.state.data.level!==2?'block':'none');
+        $('#tambahReady [name=ready]').val(moment(breakdown).format('HH:mm'));
+        $('#tambahReady .ready-toggle').css('display',this.state.data.level!==2?'block':'none');
     }
 
     gantiWaktu(i,b){
