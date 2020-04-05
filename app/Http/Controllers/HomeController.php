@@ -124,6 +124,36 @@ class HomeController extends Controller
         $log->save();
         return redirect()->back();
     }
+    public function editReady(Request $request){
+        $unit = Unit::where('code', $request->get('code'))->first();
+        if(!$unit) $unit = Unit::create(['code' => $request->get('code')]);
+        $log = Log::find($request->log);
+        if(Auth::user()->level==2){
+            $log->fill([
+                'unit_id' => $unit->id,
+                'kategori' => $request->kategori,
+                'location' => $request->location,
+                'keterangan' => $request->keterangan,
+                'checked' => false
+            ]);
+        }else{
+            $jam = explode(':',$request->breakdown);
+            $time = new Carbon($log->breakdown);
+            $time->hour = $jam[0];
+            $time->minute = $jam[1];
+            $log->fill([
+                'unit_id' => $unit->id,
+                'breakdown' => $time,
+                'kategori' => $request->kategori,
+                'location' => $request->location,
+                'keterangan' => $request->keterangan,
+                'checked' => false
+            ]);
+        }
+
+        $log->save();
+        return redirect()->back();
+    }
 
     public function addReady(Request $request){
         $unit = Unit::where('code', $request->get('code'))->first();

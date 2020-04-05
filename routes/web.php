@@ -45,5 +45,6 @@ Route::get('/resource', 'HomeController@resource')->name('resource');
 Route::get('/download', 'HomeController@download')->name('download');
 Route::post('/breakdown','HomeController@addBreakdown')->name('breakdown');
 Route::post('/edit/breakdown','HomeController@editBreakdown')->name('edit.breakdown');
+Route::post('/edit/ready','HomeController@editReady')->name('edit.ready');
 Route::post('/ready','HomeController@addReady')->name('ready');
 Route::post('/notifikasi','HomeController@notifikasi')->name('notifikasi');

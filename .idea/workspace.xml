@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="23b54f7f-fa64-474c-bd99-5eb7723d70d8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/web_data_breakdown.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/src/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Log.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2020_04_04_225500_add_checked.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="42" selection-start-column="42" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-38">
+              <caret line="166" column="30" selection-start-line="166" selection-start-column="30" selection-end-line="166" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/Main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="219" column="43" lean-forward="true" selection-start-line="219" selection-start-column="43" selection-end-line="219" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1638" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+              <folding>
+                <element signature="e#32#67#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/logging.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="131" column="24" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
+              <folding>
+                <element signature="e#40#52#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>th&gt;</find>
+      <find>td&gt;</find>
+      <find>table table-bordered</find>
+      <find>edit</find>
+      <find>p</find>
+      <find>breakdown</find>
+      <find>flatpick</find>
+      <find>data.keterangan</find>
+      <find>Ready Ti</find>
+      <find>setLo</find>
+      <find>print</find>
+      <find>download</find>
+      <find>change</find>
+      <find>hh:mm</find>
+      <find>parse</find>
+      <find>console</find>
+      <find>colSpan</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>td&gt;</replace>
+      <replace>th&gt;</replace>
+      <replace>table table-bordered my-3</replace>
+      <replace>HH:mm</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/.env" />
+        <option value="$PROJECT_DIR$/src/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/src/app/Http/Controllers/Auth/LoginController.php" />
+        <option value="$PROJECT_DIR$/src/database/migrations/2019_10_11_071503_create_units_table.php" />
+        <option value="$PROJECT_DIR$/src/app/Unit.php" />
+        <option value="$PROJECT_DIR$/src/resources/sass/app.scss" />
+        <option value="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" />
+        <option value="$PROJECT_DIR$/src/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/src/resources/js/app.js" />
+        <option value="$PROJECT_DIR$/src/database/migrations/2019_10_11_072634_create_logs_table.php" />
+        <option value="$PROJECT_DIR$/src/config/app.php" />
+        <option value="$PROJECT_DIR$/src/resources/js/bootstrap.js" />
+        <option value="$PROJECT_DIR$/src/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/src/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/src/resources/views/favicon.blade.php" />
+        <option value="$PROJECT_DIR$/src/resources/js/components/Main.js" />
+        <option value="$PROJECT_DIR$/src/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/src/app/Log.php" />
+        <option value="$PROJECT_DIR$/src/database/migrations/2020_04_04_225500_add_checked.php" />
+        <option value="$PROJECT_DIR$/src/routes/web.php" />
+        <option value="$PROJECT_DIR$/src/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/src/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/src/config/logging.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/Main.js" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/src/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/src/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/src/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/src/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/src/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/src/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/src/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/src/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/src/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/src/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/src/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/src/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/src/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/src/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/src/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/src/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/src/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/src/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/src/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/src/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/src/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/src/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/src/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/src/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/src/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/src/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/src/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/src/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/src/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/src/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/src/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/src/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/src/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/src/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/src/vendor/composer" />
+      <path value="$PROJECT_DIR$/src/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/src/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/src/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/src/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/src/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/src/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/src/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/src/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/src/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/src/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/src/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/src/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/src/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/src/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/src/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/src/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/src/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/src/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/src/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/src/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/src/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/src/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/src/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/src/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/src/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/src/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/src/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/src/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/src/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/src/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/src/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/src/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/src/vendor/league/commonmark" />
+    </include_path>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+        <option value="$PROJECT_DIR$/.idea/php.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1358" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="web_data_breakdown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_data_breakdown" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_data_breakdown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_data_breakdown" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_data_breakdown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_data_breakdown" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Providers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_data_breakdown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_data_breakdown" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_data_breakdown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_data_breakdown" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_data_breakdown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_data_breakdown" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_data_breakdown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_data_breakdown" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_data_breakdown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_data_breakdown" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_data_breakdown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_data_breakdown" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/public/favicon" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\web_data_breakdown" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\web_data_breakdown\src\public\favicon" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="23b54f7f-fa64-474c-bd99-5eb7723d70d8" name="Default Changelist" comment="" />
+      <created>1570776828619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570776828619</updated>
+      <workItem from="1570776834252" duration="25900000" />
+      <workItem from="1570862428787" duration="3224000" />
+      <workItem from="1570869927422" duration="16375000" />
+      <workItem from="1585903224217" duration="20945000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1570797861078</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570797861078</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init">
+      <created>1570798120982</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570798120982</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init">
+      <created>1570798642643</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570798642643</updated>
+    </task>
+    <task id="LOCAL-00004" summary="init">
+      <created>1570798932609</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570798932609</updated>
+    </task>
+    <task id="LOCAL-00005" summary="init">
+      <created>1570799000273</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1570799000273</updated>
+    </task>
+    <task id="LOCAL-00006" summary="init">
+      <created>1570799099722</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570799099722</updated>
+    </task>
+    <task id="LOCAL-00007" summary="init">
+      <created>1570799323778</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1570799323778</updated>
+    </task>
+    <task id="LOCAL-00008" summary="init">
+      <created>1570799390736</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1570799390736</updated>
+    </task>
+    <task id="LOCAL-00009" summary="init">
+      <created>1570799488441</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1570799488441</updated>
+    </task>
+    <task id="LOCAL-00010" summary="init">
+      <created>1570800453175</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1570800453175</updated>
+    </task>
+    <task id="LOCAL-00011" summary="init">
+      <created>1570800502466</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570800502466</updated>
+    </task>
+    <task id="LOCAL-00012" summary="init">
+      <created>1570801648505</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1570801648505</updated>
+    </task>
+    <task id="LOCAL-00013" summary="init">
+      <created>1570802361220</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1570802361220</updated>
+    </task>
+    <task id="LOCAL-00014" summary="init">
+      <created>1570802839240</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1570802839240</updated>
+    </task>
+    <task id="LOCAL-00015" summary="init">
+      <created>1570803096983</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1570803096983</updated>
+    </task>
+    <task id="LOCAL-00016" summary="done prototype">
+      <created>1570803302929</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1570803302929</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Rev 1 Prototype">
+      <created>1570806236831</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1570806236831</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Rev 2 Excel">
+      <created>1570808601113</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1570808601113</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Rev LAST">
+      <created>1570877887295</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1570877887295</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Rev LAST">
+      <created>1570884847480</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1570884847480</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Done">
+      <created>1570885933146</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1570885933146</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Done">
+      <created>1570886626291</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1570886626292</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Done">
+      <created>1570912527739</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1570912527739</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Revisi">
+      <created>1586016355960</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1586016355960</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Revisi">
+      <created>1586016539680</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1586016539680</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Revisi">
+      <created>1586016553370</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1586016553370</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Revisi">
+      <created>1586016573572</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1586016573572</updated>
+    </task>
+    <task id="LOCAL-00028" summary="add procfile heroku">
+      <created>1586016957456</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1586016957456</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add procfile heroku">
+      <created>1586017621563</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1586017621563</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add procfile heroku">
+      <created>1586018978025</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1586018978025</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add procfile heroku">
+      <created>1586019108203</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1586019108203</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add procfile heroku">
+      <created>1586019721122</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1586019721122</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="66444000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19296375" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="TypeScript" order="10" />
+      <window_info anchor="bottom" auto_hide="true" x="1371" y="430" width="1322" height="236" id="Terminal" order="11" type="SLIDING" weight="0.3391116" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" visible="true" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26172465" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="TypeScript" order="10" />
+      <window_info active="true" anchor="bottom" auto_hide="true" x="22" y="266" width="1322" height="236" id="Terminal" order="11" type="WINDOWED" visible="true" weight="0.33908045" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="init" />
+    <MESSAGE value="done prototype" />
+    <MESSAGE value="Rev 1 Prototype" />
+    <MESSAGE value="Rev 2 Excel" />
+    <MESSAGE value="Rev LAST" />
+    <MESSAGE value="Done" />
+    <MESSAGE value="Revisi" />
+    <MESSAGE value="add procfile heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="add procfile heroku" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="144" column="4" lean-forward="true" selection-start-line="144" selection-start-column="4" selection-end-line="147" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_10_11_071503_create_units_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/js/components/Example.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/sass/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="389" column="8" selection-start-line="389" selection-start-column="8" selection-end-line="389" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/favicon.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/.env.example">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Unit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding>
+            <element signature="e#7#20#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_10_11_072634_create_logs_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/js/components/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="178" column="292" selection-start-line="178" selection-start-column="292" selection-end-line="178" selection-end-column="292" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Log.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2366">
+          <caret line="136" column="58" selection-start-line="136" selection-start-column="58" selection-end-line="136" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_04_04_225500_add_checked.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/logging.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding>
+            <element signature="e#32#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="131" column="24" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
+          <folding>
+            <element signature="e#40#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1638" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="166" column="30" selection-start-line="166" selection-start-column="30" selection-end-line="166" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="219" column="43" lean-forward="true" selection-start-line="219" selection-start-column="43" selection-end-line="219" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

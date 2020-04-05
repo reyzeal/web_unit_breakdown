@@ -96,6 +96,24 @@ class Main extends React.Component{
         $('#editBreakdown .breakdown-toggle').css('display',this.state.data.level!==2?'block':'none');
     }
 
+    editReady(x){
+        const {log, code, kategori, keterangan, location, breakdown} = x;
+        $('#editReady [name=log]').val(log);
+        $('#editReady [name=keterangan]').val(keterangan);
+        $('#editReady [name=kategori]').find(`[value=${kategori}]`).attr('selected','selected');
+        $('#editReady [name=code]').val(code);
+        $('#editReady [name=location]').val(location);
+        $('#editReady [name=breakdown]').flatpickr({
+            enableTime:true,
+            time_24hr:true,
+            noCalendar:true,
+            defaultHour:moment(breakdown).format('HH'),
+            defaultMinute:moment(breakdown).format('mm'),
+        });
+        $('#editReady [name=breakdown]').val(moment(breakdown).format('HH:mm'));
+        $('#editReady .breakdown-toggle').css('display',this.state.data.level!==2?'block':'none');
+    }
+
     setLogReady(x){
         const {log, code, kategori, keterangan, location, breakdown} = x;
         $('#tambahReady [name=log]').val(log);
@@ -201,7 +219,7 @@ class Main extends React.Component{
                             <th>Jam</th>
                             <th>Status</th>
                             <th>Kategori</th>
-                            {/*<td>Action</td>*/}
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -214,10 +232,12 @@ class Main extends React.Component{
                             <td>{moment(data.ready).format('HH:mm')+' WITA'}</td>
                             <td className="bg-success">ready</td>
                             <td>{data.kategori}</td>
-                            {/*<td>*/}
-                            {/*    /!*<button className="btn btn-warning">Edit</button>*!/*/}
-                            {/*    <button className="btn btn-success">Ready</button>*/}
-                            {/*</td>*/}
+                            <td>
+                                {/*<button className="btn btn-warning">Edit</button>*/}
+                                <button className="btn btn-warning mx-1" data-toggle="modal" data-target="#editReady" onClick={this.editReady.bind(this,{log:data.id, kategori:data.kategori, keterangan:data.keterangan, code:data.unit.code, location:data.location, breakdown:data.breakdown})}>
+                                    <i className="fa fa-pencil"> </i> Edit
+                                </button>
+                            </td>
                         </tr>))}
                         {!ready.length?<tr><td className="text-center" colSpan={7}>Saat ini kosong</td></tr>:''}
                         </tbody>
