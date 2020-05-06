@@ -71,9 +71,17 @@ class HomeController extends Controller
             $worksheet->setCellValueByColumnAndRow(5,$i, \Carbon\Carbon::parse($log->breakdown)->format('d-m-Y'));
             $worksheet->setCellValueByColumnAndRow(6,$i, \Carbon\Carbon::parse($log->breakdown)->format('H:i'));
             $worksheet->setCellValueByColumnAndRow(7,$i, 'B/D');
-            $worksheet->setCellValueByColumnAndRow(8,$i, \Carbon\Carbon::parse($log->ready)->format('d-m-Y'));
-            $worksheet->setCellValueByColumnAndRow(9,$i, \Carbon\Carbon::parse($log->ready)->format('H:i'));
-            $worksheet->setCellValueByColumnAndRow(10,$i, 'ready');
+            if($log->ready){
+                $worksheet->setCellValueByColumnAndRow(8,$i, \Carbon\Carbon::parse($log->ready)->format('d-m-Y'));
+                $worksheet->setCellValueByColumnAndRow(9,$i, \Carbon\Carbon::parse($log->ready)->format('H:i'));
+                $worksheet->setCellValueByColumnAndRow(10,$i, 'ready');
+            }
+            else{
+                $worksheet->setCellValueByColumnAndRow(8,$i, "-");
+                $worksheet->setCellValueByColumnAndRow(9,$i, "-");
+                $worksheet->setCellValueByColumnAndRow(10,$i, '-');
+            }
+
             $worksheet->setCellValueByColumnAndRow(11,$i++, $log->kategori);
         }
         $nama = "Report.xlsx";
