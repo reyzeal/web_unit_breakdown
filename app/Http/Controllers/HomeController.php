@@ -40,7 +40,7 @@ class HomeController extends Controller
             $b = $a;
             $a = $c;
         }
-        $logs = Log::whereBetween('created_at',[$a,$b])->with('unit')->get();
+        $logs = Log::whereBetween('created_at',[$a,$b])->orWhereBetween('breakdown',[$a,$b])->orWhereBetween('ready',[$a,$b])->with('unit')->get();
         $i = 1;
 
         $spreadsheet = new Spreadsheet();
