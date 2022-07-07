@@ -29,6 +29,6 @@
         "font-awesome": "^4.7.0",
         "html2canvas": "^1.0.0-rc.5",
         "jspdf": "^1.5.3",
-        "moment": "^2.24.0"
+        "moment": "^2.29.4"
     }
 }
